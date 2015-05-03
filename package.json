@@ -1,7 +1,12 @@
 {
-    "name": "Readium",
-    "version": "2.0.0",
-    "description": "Just a medium-like blogging platform.",
-    "author": "Sven Read",
-    "homepage": "http://www.svenread.com/readium"
+  "name": "Readium",
+  "version": "2.0.0",
+  "description": "Just a medium-like blogging platform.",
+  "author": "Sven Read",
+  "homepage": "http://www.svenread.com/readium",
+  "dependencies": {
+    "browser-sync": "^2.6.9",
+    "gulp": "^3.8.11",
+    "gulp-ruby-sass": "^1.0.5"
+  }
 }

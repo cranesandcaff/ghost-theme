@@ -8,16 +8,12 @@
 {{! The big featured header on the homepage, with the site logo and description }}
 
 
-<div class="teaserimage">
-    <div class="teaserimage-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-        Teaser Image
-    </div>
-</div>
-
 <header class="blog-header">
-    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}" style="background-image: url({{@blog.logo}})">{{@blog.title}}</a>{{/if}}
-    <h1 class="blog-title">{{@blog.title}}</h1>
-    <h2 class="blog-description">{{@blog.description}}</h2>
+    <a href="{{@blog.url}}" class="logo-readium smallogo"><span class="logo" style="background-image: url({{@blog.logo}})"></span></a>
+    <div class="blog-meta--page">
+      <a href="{{@blog.url}}"><h1 class="blog-title">{{@blog.title}}</h1></a>
+      <h2 class="blog-description">{{@blog.description}}</h2>
+    </div>
 </header>
 
 <script>
@@ -45,7 +41,7 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-    
+
     <a href="/">Back to Overview</a>
 
     <h5 class="index-headline normal"><span>Article list for {{tag.name}}</span></h5>
@@ -79,11 +75,3 @@
          <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
     </div>
 </footer>
-
-
-
-
-
-
-
-

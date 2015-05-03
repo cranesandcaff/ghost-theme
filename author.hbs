@@ -31,14 +31,16 @@
 
 {{#author}}
 
-<header class="blog-header">
-    {{#if image}}<a class="blog-logo" href="#" style="background-image: url({{image}})">{{name}}</a>{{/if}}
-    <h1 class="blog-title">{{name}}</h1>
-    <h2 class="blog-description">{{bio}}</h2>
-    <div class="custom-links">
-        <a href="https://twitter.com/cranesandcaff" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-        <a href="https://github.com/cranesandcaff" target="_blane"><i class="fa fa-github"></i></a>
+<header class="blog-header cf">
+    {{#if image}}<span class="blog-logo" style="background-image: url({{image}})">{{name}}</span>{{/if}}
+    <div class="blog-meta--author">
+      <h1 class="blog-title">{{name}}</h1>
+      <hr></hr>
+      <a href="https://twitter.com/cranesandcaff" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+      <a href="https://github.com/cranesandcaff" target="_blane"><i class="fa fa-github"></i></a>
+      <h2 class="blog-description">{{bio}}</h2>
     </div>
+
 </header>
 
 
@@ -68,3 +70,13 @@
     <h5 class="index-headline bottom"><span>{{pagination}}</span></h5>
 
 </main>
+<div class="bottom-closer">
+    <div class="background-closer-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        Image
+    </div>
+    <div class="inner">
+        <h1 class="blog-title">{{@blog.title}}</h1>
+        <h2 class="blog-description">{{@blog.description}}</h2>
+        <a href="/" class="btn">Back to Overview</a>
+    </div>
+</div>
